@@ -10,6 +10,9 @@ public class Shoot : MonoBehaviour
     [SerializeField] GameObject bullet;
     [SerializeField] float CoolDown;
     [SerializeField] float range;
+    [SerializeField] Transform firePoint;
+    [SerializeField] GameObject rotationObject;
+
 
     // Start is called before the first frame update
     void Start()
@@ -28,6 +31,7 @@ public class Shoot : MonoBehaviour
         //    CurrentCoolDown = CoolDown;
         //}
         TurnTowards(target);
+        RotateObject();
         if (target == null)
         {
             return;
@@ -61,12 +65,22 @@ public class Shoot : MonoBehaviour
     {
         Quaternion lookRot = Quaternion.LookRotation(target.transform.position - transform.position);
         Vector3 rot = lookRot.eulerAngles;
-        transform.rotation = Quaternion.Euler(0f, rot.y, 0f); 
+        transform.rotation = Quaternion.Euler(0f, rot.y, 0f);
+
+    }
+
+    void RotateObject()
+    {
+        Quaternion lookRot = Quaternion.LookRotation(target.transform.position - rotationObject.transform.position);
+        Vector3 rot = Vector3.zero;
+
+        rot.x = lookRot.eulerAngles.x;        
+        rotationObject.transform.localEulerAngles = rot;
     }
 
     void ShootAtTarget(GameObject target)
     {
-
+        Instantiate(bullet, firePoint.position, Quaternion.identity);
     }
 
 
