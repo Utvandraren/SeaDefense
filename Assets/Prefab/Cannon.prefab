@@ -1575,10 +1575,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 4508751662056245288, guid: 98abb48c1ec499241a5dce875cd67fb8, type: 3}
-  CoolDown: 0
+  CoolDown: 2
   range: 20.78
   firePoint: {fileID: 8094431675179179240}
-  rotationObject: {fileID: 5669888600505168304}
+  rotationObject: {fileID: 4508751662056245288, guid: 98abb48c1ec499241a5dce875cd67fb8,
+    type: 3}
 --- !u!1 &8477196956077452801
 GameObject:
   m_ObjectHideFlags: 0

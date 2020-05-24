@@ -23,15 +23,17 @@ public class Shoot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //CurrentCoolDown -= Time.deltaTime;
+        CurrentCoolDown -= Time.deltaTime;
 
-        //if(CurrentCoolDown < 0)
-        //{
-        //    TurnTowards(target);
-        //    CurrentCoolDown = CoolDown;
-        //}
+        if (CurrentCoolDown < 0)
+        {
+            ShootAtTarget(target);
+            CurrentCoolDown = CoolDown;
+        }
+
         TurnTowards(target);
         RotateObject();
+
         if (target == null)
         {
             return;
@@ -80,7 +82,7 @@ public class Shoot : MonoBehaviour
 
     void ShootAtTarget(GameObject target)
     {
-        Instantiate(bullet, firePoint.position, Quaternion.identity);
+        Instantiate(bullet, firePoint.position, firePoint.rotation);
     }
 
 

@@ -5,7 +5,8 @@ using UnityEngine;
 public class Health : MonoBehaviour
 {
     [SerializeField] int maxHealth;
-    int currentHealth;
+    private int currentHealth;
+    [SerializeField] Animator animator;
 
     // Start is called before the first frame update
     void Start()
@@ -16,11 +17,22 @@ public class Health : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        Debug.LogFormat(currentHealth.ToString() + " " + transform.name.ToString());
     }
 
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
+
+        if(currentHealth <= 0)
+        {
+            Die();
+        }
+    }
+
+    void Die()
+    {
+        Destroy(gameObject);
+        //Play DeathEffects;
     }
 }

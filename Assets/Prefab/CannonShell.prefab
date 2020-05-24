@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 8471854569906323469}
   - component: {fileID: 2787336413442653428}
   - component: {fileID: 2128505921}
+  - component: {fileID: 7757687565942012082}
+  - component: {fileID: 4062796595852343205}
   m_Layer: 0
   m_Name: CannonShell
   m_TagString: Untagged
@@ -26,7 +28,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4508751662056245288}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0.033675645, y: 0, z: 0, w: 0.99943286}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 7.111357, y: 7.111357, z: 7.111357}
   m_Children: []
@@ -92,5 +94,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d57a51cca52ec148bedab05155dd75a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bulletSpeed: {x: 0, y: 0, z: 1}
+  bulletSpeed: 30
   lifeTime: 8
+  damage: 40
+  impactEffect: {fileID: 7995794153820803284, guid: 3017410ff5ed9e841a38a4a021930fe7,
+    type: 3}
+--- !u!65 &7757687565942012082
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4508751662056245288}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.009784817, y: 0.009784817, z: 0.028567852}
+  m_Center: {x: -2.3283067e-10, y: 2.3283067e-10, z: 0.002704478}
+--- !u!54 &4062796595852343205
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4508751662056245288}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 1
