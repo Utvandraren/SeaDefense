@@ -14,13 +14,19 @@ public class UIManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        resourceText.text = resourceData.value.ToString();
-        resourceProductionText.text = resourceData.resourcePoduction.ToString();
+        UpdateText();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        UpdateText();
+    }
+
+    void UpdateText()
+    {
+        resourceText.text = resourceData.value.ToString();
+        resourceProductionText.text = resourceData.resourcePoduction.ToString();
+
     }
 }
