@@ -14,12 +14,6 @@ public class Health : MonoBehaviour
         currentHealth = maxHealth;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        Debug.LogFormat(currentHealth.ToString() + " " + transform.name.ToString());
-    }
-
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
@@ -28,11 +22,14 @@ public class Health : MonoBehaviour
         {
             Die();
         }
+        Debug.LogFormat(currentHealth.ToString() + " " + transform.name.ToString());
+
     }
 
     void Die()
     {
-        Destroy(gameObject);
+        animator.SetBool("isDead", true);
+        Destroy(gameObject,20f);
         //Play DeathEffects;
     }
 }

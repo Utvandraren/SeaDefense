@@ -26,16 +26,17 @@ public class CannonShell : MonoBehaviour
         //if(direction.magnitude <= bulletSpeed * Time.deltaTime)
             
     }
-
+    
     void OnCollisionEnter(Collision collision)
     {
-        
+        //collision.GetContact(0).point;
         if (collision.collider.transform.tag == "Enemy")
         {
             collision.collider.transform.GetComponent<Health>().TakeDamage(damage);
         }
-        Debug.Log("HitBOOOMM!!!");
-        Instantiate(impactEffect, transform.position, transform.rotation);
+
+        ParticleSystem instObj = Instantiate(impactEffect, transform.position, transform.rotation);
+        Destroy(instObj, 6f);
         Destroy(gameObject);
     }
 
