@@ -21,7 +21,8 @@ public class ResourceProducer : MonoBehaviour
     {
         resourceStockpile += resourceProduction;
         //Show NumbersEffectAbovebuilding
-        Debug.LogFormat(transform.name + "  " + "Prod: " + resourceProduction.ToString() + "  " + "stockpile" + resourceStockpile.ToString());
+        
+        //Debug.LogFormat(transform.name + "  " + "Prod: " + resourceProduction.ToString() + "  " + "stockpile" + resourceStockpile.ToString());
     }
 
     void activateLettertEffect()

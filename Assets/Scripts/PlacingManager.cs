@@ -4,13 +4,18 @@ using UnityEngine;
 
 public class PlacingManager : MonoBehaviour
 {
-    [SerializeField] GameObject towerBase;
-    [SerializeField] GameObject ActivePlaceableObject;
-    private Transform pos;
+    BuildingObj ActivePlaceableObject;
+    [SerializeField] FloatDataValue resourceData;
+    [SerializeField] BuildingObj[] buildings;
 
-
+   
     // Update is called once per frame
     void Update()
+    {
+        HandleMouseClick();
+    }
+
+    void HandleMouseClick()
     {
         RaycastHit hit;
 
@@ -21,20 +26,60 @@ public class PlacingManager : MonoBehaviour
             {
                 if (hit.transform.tag == "Ground")
                 {
-                    PlaceBase(hit);
+                    GetBuilding("Tower");
+                    //Instantiate(ActivePlaceableObject.building, hit.point, new Quaternion());
+                    BuildBuilding(hit);
                 }
                 else if (hit.transform.tag == "Building")
                 {
-                    hit.transform.GetComponent<BuildablePlace>().PlaceObj(ActivePlaceableObject);
+                    GetBuilding("Artillery");
+                    BuildDefense(hit);
                 }
             }
 
         }
     }
 
-    void PlaceBase(RaycastHit hitInfo)
+    void GetBuilding(string name)
     {
-        GameObject obj = Instantiate(towerBase, hitInfo.point, new Quaternion());
+        for (int i = 0; i < buildings.Length; i++)
+        {
+            if(name == buildings[i].name)
+            {
+                ActivePlaceableObject = buildings[i];
+                //Debug.Log(ActivePlaceableObject.name);
+            }
+        }
+
+        
+    }
+
+    void BuildDefense(RaycastHit hitInfo)
+    {
+        if (ActivePlaceableObject.resourceCost >= resourceData.value)
+        {
+            Debug.Log("Not enough resources");
+            return;
+        }
+
+        resourceData.value -= ActivePlaceableObject.resourceCost;
+        hitInfo.transform.GetComponent<BuildablePlace>().PlaceObj(ActivePlaceableObject.building);
+    }
+
+
+    //Build building if eyou have enough resoruces
+    void BuildBuilding(RaycastHit hitInfo)
+    {
+        Debug.Log(resourceData.value.ToString());
+        if(ActivePlaceableObject.resourceCost >= resourceData.value)
+        {
+            Debug.Log("Not enough resources");
+            return;
+        }
+
+        resourceData.value -= ActivePlaceableObject.resourceCost;
+        Instantiate(ActivePlaceableObject.building, hitInfo.point, new Quaternion());
+
     }
 
 }

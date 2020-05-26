@@ -15,13 +15,13 @@ public class UIManager : MonoBehaviour
     void Start()
     {
         resourceData.ResetData();
+        InvokeRepeating("UpdateText", 0f, 2f);
         UpdateText();
     }
 
     // Update is called once per frame
     void Update()
     {
-        UpdateText();
     }
 
     void UpdateText()

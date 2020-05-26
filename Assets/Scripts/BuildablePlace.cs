@@ -5,11 +5,12 @@ using UnityEngine;
 public class BuildablePlace : MonoBehaviour
 {
     [SerializeField] Transform transformObjPos;
+    bool occupied;
 
     // Start is called before the first frame update
     void Start()
     {
-        
+        occupied = false;
     }
 
     // Update is called once per frame
@@ -20,7 +21,11 @@ public class BuildablePlace : MonoBehaviour
 
     public void PlaceObj(GameObject objToPlace)
     {
-        Instantiate(objToPlace, transformObjPos.position, new Quaternion());
-        //BuildEffect();
+        if (!occupied)
+        {
+            Instantiate(objToPlace, transformObjPos.position, new Quaternion());
+            occupied = true;
+            //BuildEffect();
+        }
     }
 }
