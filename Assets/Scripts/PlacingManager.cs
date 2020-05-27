@@ -27,7 +27,6 @@ public class PlacingManager : MonoBehaviour
                 if (hit.transform.tag == "Ground")
                 {
                     GetBuilding("Tower");
-                    //Instantiate(ActivePlaceableObject.building, hit.point, new Quaternion());
                     BuildBuilding(hit);
                 }
                 else if (hit.transform.tag == "Building")
@@ -47,7 +46,6 @@ public class PlacingManager : MonoBehaviour
             if(name == buildings[i].name)
             {
                 ActivePlaceableObject = buildings[i];
-                //Debug.Log(ActivePlaceableObject.name);
             }
         }
 
@@ -70,7 +68,6 @@ public class PlacingManager : MonoBehaviour
     //Build building if eyou have enough resoruces
     void BuildBuilding(RaycastHit hitInfo)
     {
-        Debug.Log(resourceData.value.ToString());
         if(ActivePlaceableObject.resourceCost >= resourceData.value)
         {
             Debug.Log("Not enough resources");

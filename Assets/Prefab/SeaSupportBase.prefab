@@ -2792,9 +2792,10 @@ GameObject:
   - component: {fileID: 8697241785269304022}
   - component: {fileID: 426093663641534688}
   - component: {fileID: 6256978204702931993}
+  - component: {fileID: 947549890}
   m_Layer: 0
   m_Name: SeaSupportBase
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2885,6 +2886,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &947549890
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5686241524237453509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1ae465eeb7600514e810b1fd3a6fdf83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxHealth: 10000
 --- !u!1 &5831446338645744270
 GameObject:
   m_ObjectHideFlags: 0

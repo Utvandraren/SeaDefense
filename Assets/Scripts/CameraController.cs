@@ -8,12 +8,10 @@ public class CameraController : MonoBehaviour
     [SerializeField] float movementTime = 2;
     [SerializeField] float zoomTime = 2;
 
-
-    [SerializeField] Vector3 dragStartPosition;
-    [SerializeField] Vector3 dragCurrentPosition;
     [SerializeField] Transform cameraTransform;
 
-
+    Vector3 dragStartPosition;
+    Vector3 dragCurrentPosition;
     Vector3 newPosition;
     Vector3 ZoomPosition;
     Vector2 oldMousePosition = Vector2.zero;
