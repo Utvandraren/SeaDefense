@@ -26,16 +26,34 @@ public class PlacingManager : MonoBehaviour
             {
                 if (hit.transform.tag == "Ground")
                 {
-                    GetBuilding("Tower");
+                    //GetBuilding("Tower");
                     BuildBuilding(hit);
                 }
                 else if (hit.transform.tag == "Building")
                 {
+                    BuildingObj savedObj = ActivePlaceableObject;
                     GetBuilding("Artillery");
                     BuildDefense(hit);
+                    GetBuilding(savedObj.name);
                 }
             }
 
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            GetBuilding("Tower");
+            Debug.Log("TOWER chosen");
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            GetBuilding("Rig");
+            Debug.Log("RIG chosen");
+        }
+        else if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            GetBuilding("Gatherer");
+            Debug.Log("GATHERER chosen");
         }
     }
 

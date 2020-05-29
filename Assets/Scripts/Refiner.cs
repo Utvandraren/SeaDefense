@@ -11,18 +11,15 @@ public class Refiner : MonoBehaviour
 
     float unrefinedResource;
     int amountLines;
-    List<GameObject> producers;
+    List<ResourceProducer> producers;
     
-
-
     // Start is called before the first frame update
     void Start()
     {
-        producers = new List<GameObject>();
+        producers = new List<ResourceProducer>();
 
         UpdateNearbyProducers();
         InvokeRepeating("Refine", 0f, 2f);
-
     }
 
     // Update is called once per frame
@@ -34,53 +31,39 @@ public class Refiner : MonoBehaviour
     // Get the gatherers inside the collectionRange
     void UpdateNearbyProducers()
     {
-        GameObject[] foundProducers;
-        foundProducers = GameObject.FindGameObjectsWithTag("Producer");
-        Debug.Log("array stored " + foundProducers.Length.ToString() + " producers");
-
+        producers.Clear();
+        ResourceProducer[] foundProducers;
+        foundProducers = FindObjectsOfType<ResourceProducer>();
 
         for (int i = 0; i < foundProducers.Length; i++)
         {
             if (Vector3.Distance(foundProducers[i].transform.position, transform.position) <= collectingrange)
             {
-                Debug.Log("producer inside the range found!!!!");
-                //GameObject obj = foundProducers[i];
-                producers.Add(foundProducers[i]);
-                
+                //Debug.Log("producer inside the range found!!!!");
+                if(foundProducers[i].tag == "Producer")
+                {
+                    producers.Add(foundProducers[i]);
+                }
             }
-            //producers.Add(foundProducers[i].gameObject);
-            Debug.Log("Hello");
         }
-
-        //producers.AddRange(GameObject.FindGameObjectsWithTag("Producer"));
-        //Debug.Log(producers.Count.ToString());
-
     }
 
     //Draw a line to every gatherer inside the collectionRange
     void DrawConnection()
     {
-        lines.positionCount = (producers.Count * 3);
-
-        int iteration = 0;
-
+        lines.positionCount = (producers.Count * 2);
+        
         for (int i = 0; i < producers.Count; i++)
         {
-            lines.SetPosition(0, transform.position);
-
-            lines.SetPosition(i + 1 + iteration, producers[i].transform.position);
-            lines.SetPosition(i + 2 + iteration, producers[i].transform.position);
-
-            lines.SetPosition(i + 3 + iteration, transform.position);
-
-            iteration += 3;
-
+            lines.SetPosition(2 * i, transform.position);
+            lines.SetPosition((2 * i) + 1, producers[i].anchorPos.position);
         }
     }
 
     //Refine resources gathered gatherers inside the collectionRange
     void Refine()
     {
+        UpdateNearbyProducers();
         for (int i = 0; i < producers.Count; i++)
         {
             if (Vector3.Distance(transform.position, producers[i].transform.position) <= collectingrange)
@@ -89,7 +72,6 @@ public class Refiner : MonoBehaviour
             }
         }
         resourceData.value += unrefinedResource / refineRatio;
-        Debug.Log("refine: " + resourceData.value.ToString());
     }
 
     void OnDrawGizmosSelected()

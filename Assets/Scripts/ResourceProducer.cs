@@ -5,6 +5,7 @@ using UnityEngine;
 public class ResourceProducer : MonoBehaviour
 {
     [SerializeField] float startResourceProduction;
+    public Transform anchorPos;
     float resourceProduction;
 
     [HideInInspector]

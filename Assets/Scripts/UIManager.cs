@@ -13,6 +13,9 @@ public class UIManager : MonoBehaviour
     [SerializeField] IntDataValue playerHealthData;
 
     [SerializeField] GameObject LosePrompt;
+    [SerializeField] MainMenu _mainMenu;
+
+    [SerializeField] GameObject pausMenu;
 
     public static UIManager _instance;
 
@@ -37,6 +40,14 @@ public class UIManager : MonoBehaviour
         resourceData.ResetData();
         InvokeRepeating("UpdateText", 0f, 2f);
         UpdateText();
+    }
+
+    void Update()
+    {
+        if (Input.GetButtonDown("Pause"))
+        {
+            Pause();
+        }
     }
 
     //Update the values for the different texts on the UI
@@ -64,6 +75,17 @@ public class UIManager : MonoBehaviour
 
             Time.timeScale = 1.0f;
         }
+    }
+
+    public void Pause()
+    {
+        pausMenu.SetActive(true);
+        Time.timeScale = 0f;
+    }
+
+    public void Continue()
+    {
+        Time.timeScale = 1.0f;
     }
      
 }

@@ -3,12 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-[RequireComponent(typeof(NavMeshAgent))]
+[RequireComponent(typeof(NavMeshAgent),typeof(Animator))]
 public class Attack : MonoBehaviour
 {
     [SerializeField] int damage;
     [SerializeField] Transform target;
     [SerializeField] float attackCoolDown;
+
+    Animator animator;
     NavMeshAgent agent;
     float elapsedTime;
 
@@ -16,6 +18,7 @@ public class Attack : MonoBehaviour
     void Start()
     {
         agent = transform.GetComponent<NavMeshAgent>();
+        animator = transform.GetComponent<Animator>();
 
     }
 
@@ -39,8 +42,12 @@ public class Attack : MonoBehaviour
 
     void AttackTarget()
     {
-        //Animation.play
-        Debug.Log("Attack");
+        animator.SetBool("isAttacking", true);
+        //Debug.Log("Attack");
+    }
+
+    public void DealDamageAnimEvent()
+    {
         target.GetComponent<PlayerHealth>().TakeDamage(damage);
     }
 }

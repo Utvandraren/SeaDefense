@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: PlayerHealth
   m_EditorClassIdentifier: 
   value: -3
-  _startValue: 1
+  _startValue: 10000
