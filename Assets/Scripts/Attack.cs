@@ -17,6 +17,7 @@ public class Attack : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        target = WaveManager.Instance.enemyTarget;
         agent = transform.GetComponent<NavMeshAgent>();
         animator = transform.GetComponent<Animator>();
 

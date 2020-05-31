@@ -7,15 +7,16 @@ using UnityEngine.AI;
 public class EnemyMovement : MonoBehaviour
 {
     NavMeshAgent agent;
-    [SerializeField]Transform target;
+    //[SerializeField]Transform target;
     float countDown = 5f;
     float currentTime;
 
     // Start is called before the first frame update
     void Start()
     {
+        //target = WaveManager.Instance.enemyTarget;
         agent = transform.GetComponent<NavMeshAgent>();
-        agent.destination = target.position;
+        agent.destination = WaveManager.Instance.enemyTarget.position;
         currentTime = countDown;
     }
 

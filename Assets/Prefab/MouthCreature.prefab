@@ -291,13 +291,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2922999166549730187}
-  - component: {fileID: 7920178696884586643}
   - component: {fileID: 7920178696884586652}
   - component: {fileID: 836275430}
   - component: {fileID: 836275435}
   - component: {fileID: 836275436}
   - component: {fileID: 2508031458562454361}
   - component: {fileID: 836275431}
+  - component: {fileID: 7920178696884586643}
   - component: {fileID: 8827075043015847204}
   m_Layer: 0
   m_Name: MouthCreature
@@ -322,19 +322,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!114 &7920178696884586643
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2219093301500531096}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 32c0285dae5ad02439182ec6f8854da8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 0}
 --- !u!195 &7920178696884586652
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -429,6 +416,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 23
   animator: {fileID: 2508031458562454361}
+--- !u!114 &7920178696884586643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2219093301500531096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 32c0285dae5ad02439182ec6f8854da8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
 --- !u!114 &8827075043015847204
 MonoBehaviour:
   m_ObjectHideFlags: 0

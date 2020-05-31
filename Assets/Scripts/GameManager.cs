@@ -11,9 +11,7 @@ public class GameManager : Singleton<GameManager>
     private List<GameObject> _instancedSystemPrefabs;
 
     public GameObject[] SystemPrefabs;
-
-
-
+    
     void Start()
     {
         DontDestroyOnLoad(gameObject);
@@ -81,5 +79,10 @@ public class GameManager : Singleton<GameManager>
             Destroy(_instancedSystemPrefabs[i]);
         }
         _instancedSystemPrefabs.Clear();
+    }
+
+    public void Win()
+    {
+        //UImanager.triggerWinPicture   Trigger Win Animation
     }
 }

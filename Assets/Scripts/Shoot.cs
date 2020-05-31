@@ -25,6 +25,11 @@ public class Shoot : MonoBehaviour
     {
         CurrentCoolDown -= Time.deltaTime;
 
+        if (target == null)
+        {
+            return;
+        }
+
         if (CurrentCoolDown < 0)
         {
             ShootAtTarget(target);
@@ -33,11 +38,6 @@ public class Shoot : MonoBehaviour
 
         TurnTowards(target);
         RotateObject();
-
-        if (target == null)
-        {
-            return;
-        }
     }
 
     void UpdateTarget()
