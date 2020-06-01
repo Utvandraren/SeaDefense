@@ -39,6 +39,6 @@ public class PlayerHealth : MonoBehaviour
     void Lose()
     {
         Debug.Log("You LOSE!!!!");
-        UIManager._instance.ToogleLoseUI();
+        UIManager.Instance.ToogleLoseUI();
     }
 }

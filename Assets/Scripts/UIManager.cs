@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class UIManager : MonoBehaviour
+public class UIManager : Singleton<UIManager>
 {
     [SerializeField] TextMeshProUGUI resourceText;
     [SerializeField] TextMeshProUGUI resourceProductionText;
@@ -12,27 +12,11 @@ public class UIManager : MonoBehaviour
     [SerializeField] FloatDataValue resourceData;
     [SerializeField] IntDataValue playerHealthData;
 
-    [SerializeField] GameObject LosePrompt;
-    [SerializeField] MainMenu _mainMenu;
-
+    [SerializeField] GameObject losePrompt;
+    [SerializeField] GameObject winPrompt;
     [SerializeField] GameObject pausMenu;
 
-    public static UIManager _instance;
-
-    void Awake()
-    {
-        if(_instance == null)
-        {
-            _instance = this;
-        }
-        else
-        {
-            Destroy(gameObject);
-            return;
-        }
-        DontDestroyOnLoad(gameObject);        
-    }
-
+    [SerializeField] MainMenu _mainMenu;
 
     // Start is called before the first frame update
     void Start()
@@ -61,8 +45,8 @@ public class UIManager : MonoBehaviour
     //Shows the prompt telling the player he/she lost
     public void ToogleLoseUI()
     {
-        bool value = LosePrompt.activeSelf;
-        LosePrompt.SetActive(!value);
+        bool value = losePrompt.activeSelf;
+        losePrompt.SetActive(!value);
 
         if (!value)
         {
@@ -73,6 +57,22 @@ public class UIManager : MonoBehaviour
         {
             Debug.Log("Time Started");
 
+            Time.timeScale = 1.0f;
+        }
+    }
+
+    //Shows the prompt telling the player he/she Won 
+    public void ToogleWinUI()
+    {
+        bool value = winPrompt.activeSelf;
+        winPrompt.SetActive(!value);
+
+        if (!value)
+        {
+            Time.timeScale = 0f;
+        }
+        else
+        {
             Time.timeScale = 1.0f;
         }
     }

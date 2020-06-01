@@ -84,5 +84,6 @@ public class GameManager : Singleton<GameManager>
     public void Win()
     {
         //UImanager.triggerWinPicture   Trigger Win Animation
+        UIManager.Instance.ToogleWinUI();
     }
 }
