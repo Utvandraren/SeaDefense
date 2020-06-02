@@ -6,9 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/StartMenu.unity
+    path: Assets/Scenes/Boot.unity
+    guid: 2b6a18ea5c0e56d448c2d01a3f691322
+  - enabled: 1
+    path: Assets/Scenes/StartMenu.unity
     guid: a9fb3c68870d32d46a5213718656504f
   - enabled: 1
-    path: Assets/TheShore.unity
+    path: Assets/Scenes/TheShore.unity
     guid: e6767ee0226fccd4380b99769a96661e
   m_configObjects: {}

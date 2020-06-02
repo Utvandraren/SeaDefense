@@ -10,12 +10,14 @@ public class MainMenu : MonoBehaviour
 
     public void OnFadeOutComplete()
     {
-
+        GameManager.Instance.LoadLevel("TheShore");
+        FadeIn();
     }
 
     public void OnFadeInComplete()
     {
-
+        GameManager.Instance.Unloadlevel("StartMenu");
+        gameObject.SetActive(false);
     }
 
     public void FadeIn()
@@ -30,6 +32,7 @@ public class MainMenu : MonoBehaviour
         _mainmenuAnimator.Stop();
         _mainmenuAnimator.clip = _fadeOutAnimation;
         _mainmenuAnimator.Play();
+
     }
 
     public void ExitGame()

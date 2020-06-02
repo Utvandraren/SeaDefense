@@ -20,6 +20,8 @@ public class GameManager : Singleton<GameManager>
         _loadOperations = new List<AsyncOperation>();
 
         InstantiateSystemPrefabs();
+
+        LoadLevel("StartMenu");
     }
 
     void OnLoadOperationComplete(AsyncOperation ao)
