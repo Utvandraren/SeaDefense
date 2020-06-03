@@ -2,13 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlacingManager : MonoBehaviour
+public class PlacingManager : Singleton<PlacingManager>
 {
     BuildingObj ActivePlaceableObject;
     [SerializeField] FloatDataValue resourceData;
     [SerializeField] BuildingObj[] buildings;
 
-   
+    void Start()
+    {
+        GetBuilding("Tower");
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -40,24 +44,24 @@ public class PlacingManager : MonoBehaviour
 
         }
 
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            GetBuilding("Tower");
-            Debug.Log("TOWER chosen");
-        }
-        else if (Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            GetBuilding("Rig");
-            Debug.Log("RIG chosen");
-        }
-        else if (Input.GetKeyDown(KeyCode.Alpha3))
-        {
-            GetBuilding("Gatherer");
-            Debug.Log("GATHERER chosen");
-        }
+        //if (Input.GetKeyDown(KeyCode.Alpha1))
+        //{
+        //    GetBuilding("Tower");
+        //    Debug.Log("TOWER chosen");
+        //}
+        //else if (Input.GetKeyDown(KeyCode.Alpha2))
+        //{
+        //    GetBuilding("Rig");
+        //    Debug.Log("RIG chosen");
+        //}
+        //else if (Input.GetKeyDown(KeyCode.Alpha3))
+        //{
+        //    GetBuilding("Gatherer");
+        //    Debug.Log("GATHERER chosen");
+        //}
     }
 
-    void GetBuilding(string name)
+    public void GetBuilding(string name)
     {
         for (int i = 0; i < buildings.Length; i++)
         {
@@ -65,9 +69,7 @@ public class PlacingManager : MonoBehaviour
             {
                 ActivePlaceableObject = buildings[i];
             }
-        }
-
-        
+        }       
     }
 
     void BuildDefense(RaycastHit hitInfo)
@@ -94,7 +96,5 @@ public class PlacingManager : MonoBehaviour
 
         resourceData.value -= ActivePlaceableObject.resourceCost;
         Instantiate(ActivePlaceableObject.building, hitInfo.point, new Quaternion());
-
     }
-
 }
