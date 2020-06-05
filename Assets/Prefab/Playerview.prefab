@@ -26,7 +26,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1632279940836487874}
-  m_LocalRotation: {x: 0.39691454, y: -0, z: -0, w: 0.91785556}
+  m_LocalRotation: {x: 0.39691567, y: 0, z: 0, w: 0.91785514}
   m_LocalPosition: {x: 0, y: 34, z: -21}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -57,12 +57,12 @@ MonoBehaviour:
     building: {fileID: 7517521285286975652, guid: bdd252e25af9f9d4e96a4256f9a6e784,
       type: 3}
     resourceCost: 10
-  - name: Rig
-    building: {fileID: 177493117578129549, guid: 24bdb06ad0ed0b743812568fa0ba5a63,
+  - name: Producer
+    building: {fileID: 8907165083663589466, guid: e6b00d467657a7745ab27d4c2916f0b8,
       type: 3}
     resourceCost: 10
-  - name: Gatherer
-    building: {fileID: 4799234901986550928, guid: d547a9f3bbb7fda4389b273723eb7fe1,
+  - name: Refiner
+    building: {fileID: 1105330871102416450, guid: 6f4892746d5289f43960a0657538f852,
       type: 3}
     resourceCost: 10
 --- !u!114 &4119765184585465336
