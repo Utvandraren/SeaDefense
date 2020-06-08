@@ -12,6 +12,7 @@ public class Shoot : MonoBehaviour
     [SerializeField] float range;
     [SerializeField] Transform firePoint;
     [SerializeField] GameObject rotationObject;
+    [SerializeField] ParticleSystem muzzleFlash;
 
 
     // Start is called before the first frame update
@@ -82,6 +83,7 @@ public class Shoot : MonoBehaviour
 
     void ShootAtTarget(GameObject target)
     {
+        muzzleFlash.Play();
         Instantiate(bullet, firePoint.position, firePoint.rotation);
     }
 

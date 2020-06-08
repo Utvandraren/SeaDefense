@@ -1580,6 +1580,7 @@ MonoBehaviour:
   firePoint: {fileID: 8094431675179179240}
   rotationObject: {fileID: 4508751662056245288, guid: 98abb48c1ec499241a5dce875cd67fb8,
     type: 3}
+  muzzleFlash: {fileID: 0}
 --- !u!1 &8477196956077452801
 GameObject:
   m_ObjectHideFlags: 0
