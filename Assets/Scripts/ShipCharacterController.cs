@@ -6,10 +6,13 @@ public class ShipCharacterController : MonoBehaviour
 {
     Animator animator;
     ExhaustController rocketController;
+    Rigidbody rigid;
+    Vector3 direction;
 
     // Start is called before the first frame update
     void Start()
     {
+        rigid = GetComponent<Rigidbody>();
         animator = GetComponent<Animator>();
         rocketController = GetComponentInChildren<ExhaustController>();
     }
@@ -18,12 +21,18 @@ public class ShipCharacterController : MonoBehaviour
     void Update()
     {
         UpdateAnimation();
+        HandleMovement();
         //Set movement based on horizontal and vertikal input
     }
 
-    public void Move()
+    public void HandleMovement()
     {
-        
+        direction.z = -Input.GetAxisRaw("Horizontal");
+        direction.y = Input.GetAxisRaw("Vertical");
+        rigid.AddForce(direction * 40f);
+        direction = Vector3.zero;
+
+       
     }
 
     void UpdateAnimation()
