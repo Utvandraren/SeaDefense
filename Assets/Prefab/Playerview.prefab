@@ -65,6 +65,9 @@ MonoBehaviour:
     building: {fileID: 1105330871102416450, guid: 6f4892746d5289f43960a0657538f852,
       type: 3}
     resourceCost: 10
+  clickableLayer:
+    serializedVersion: 2
+    m_Bits: 1024
 --- !u!114 &4119765184585465336
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -959,7 +962,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 398.62
+      scalar: 552.1
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -4857,11 +4860,11 @@ AudioSource:
   m_GameObject: {fileID: 7201970886304557818}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 24300002, guid: 0b45901a493dc8c4082cc86fac3abc1a,
+  OutputAudioMixerGroup: {fileID: 8654249452688258374, guid: 0b45901a493dc8c4082cc86fac3abc1a,
     type: 2}
   m_audioClip: {fileID: 8300000, guid: a3b863571c3498c4e9d2a118ef1a33b6, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.096
   m_Pitch: 1
   Loop: 1
   Mute: 0

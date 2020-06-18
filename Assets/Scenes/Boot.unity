@@ -180,18 +180,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
-    - target: {fileID: 1642609511366330474, guid: d0a742c3d98a92144882198389c5e039,
-        type: 3}
-      propertyPath: SystemPrefabs.Array.data[1]
-      value: 
-      objectReference: {fileID: 1404145987339512399, guid: 4d61afb2486784e4c88f989052f74f0e,
-        type: 3}
-    - target: {fileID: 1642609511366330474, guid: d0a742c3d98a92144882198389c5e039,
-        type: 3}
-      propertyPath: SystemPrefabs.Array.data[0]
-      value: 
-      objectReference: {fileID: 3941632299664032317, guid: 1d4a764295c56be469a84b46075ebcfa,
-        type: 3}
     - target: {fileID: 5166299561887013316, guid: d0a742c3d98a92144882198389c5e039,
         type: 3}
       propertyPath: m_LocalPosition.x

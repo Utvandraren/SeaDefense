@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
+
 
 public class PlacingManager : Singleton<PlacingManager>
 {
@@ -8,9 +10,13 @@ public class PlacingManager : Singleton<PlacingManager>
     [SerializeField] FloatDataValue resourceData;
     [SerializeField] BuildingObj[] buildings;
 
+    public LayerMask clickableLayer;
+
     void Start()
     {
+        resourceData.ResetData();
         GetBuilding("Tower");
+        //clickableLayer = ~clickableLayer;
     }
 
     // Update is called once per frame
@@ -25,9 +31,14 @@ public class PlacingManager : Singleton<PlacingManager>
 
         if (Input.GetMouseButtonDown(0))
         {
+            if (EventSystem.current.IsPointerOverGameObject())
+            {
+                return;
+            }
 
             if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out hit))
             {
+                
                 if (hit.transform.tag == "Ground")
                 {
                     //GetBuilding("Tower");
@@ -39,6 +50,11 @@ public class PlacingManager : Singleton<PlacingManager>
                     GetBuilding("Artillery");
                     BuildDefense(hit);
                     GetBuilding(savedObj.name);
+                }
+                else
+                {
+                    Debug.Log("Bothing found");
+                    return;
                 }
             }
 

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1982230484}
   - component: {fileID: 1982230486}
   - component: {fileID: 1982230485}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -90,7 +90,7 @@ GameObject:
   - component: {fileID: 6729456211680549415}
   - component: {fileID: 7598018160101787696}
   - component: {fileID: 8562371705361357228}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Spotlight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -293,7 +293,7 @@ GameObject:
   - component: {fileID: 860644402121695940}
   - component: {fileID: 4572827313697424245}
   - component: {fileID: 4839462878662758715}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -494,7 +494,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 586470850077530382}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: PosPlace
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -529,7 +529,7 @@ GameObject:
   - component: {fileID: 7535995161704359159}
   - component: {fileID: 1616548390}
   - component: {fileID: 1616548386}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: SmallSeaTower
   m_TagString: Building
   m_Icon: {fileID: 0}
