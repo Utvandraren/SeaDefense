@@ -29,7 +29,7 @@ public class UIManager : Singleton<UIManager>
 
     void Update()
     {
-        if (Input.GetButtonDown("Pause"))
+        if (Input.GetButtonDown("Pause") /*&& GameManager.Instance.CurrentGameState == GameManager.GameState.RUNNING*/)
         {
             Pause();
         }
