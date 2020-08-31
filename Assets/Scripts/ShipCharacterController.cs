@@ -61,9 +61,12 @@ public class ShipCharacterController : MonoBehaviour
     void UpdateAnimation()
     {
         float blendWeight;
-        blendWeight = rocketController.weight;
-        blendWeight = (blendWeight - 1) / (5 - 1);
-        //blendWeight *= 100f;
+        blendWeight = weight;
+        //blendWeight = (blendWeight - 1) / 4;
+
+        //Normalize blendweight here
+        blendWeight = (blendWeight - 1) / ( 25 - 1);
+
         Mathf.Clamp(blendWeight, 0f, 1f);
         animator.SetFloat("Blend", blendWeight);
     }

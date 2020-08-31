@@ -18,7 +18,7 @@ public class ExhaustController : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.Space))
         {
-            weight += 0.3f;
+            weight += 0.6f;
         }
 
         EmitRockets();
@@ -32,8 +32,8 @@ public class ExhaustController : MonoBehaviour
             
         }
 
-        weight -= 0.2f;
-        weight = Mathf.Clamp(weight, 1f, 500f);
+        weight -= 0.3f;
+        weight = Mathf.Clamp(weight, 1f, 800f);
 
 
     }
