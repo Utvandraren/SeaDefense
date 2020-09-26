@@ -4,21 +4,28 @@ using UnityEngine;
 
 public class Node : MonoBehaviour
 {
-    
+    [SerializeField] MissionDetails missionData;
 
-    void OpenMissionMeny()
+    [System.Serializable]
+    public struct MissionDetails
     {
-        //Toogle MenuPrefab to active
-        //Set position to the same as node
-        //load data for what should be shown
+        public enum Difficulty
+        {
+            Easy,
+            Normal,
+            Hard,
+            Insane
+        }
+        public Difficulty diff;
+        public int reward;
     }
 
     void OnMouseDown()
     {
-        OpenMissionMeny();
+        ExpansionMapManager.Instance.LoadMissionPrefab(transform.position, missionData);
     }
 
-    
+
 
 
 }
