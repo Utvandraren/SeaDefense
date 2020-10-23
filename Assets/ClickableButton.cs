@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 public class ClickableButton : MonoBehaviour
 {
-    public UnityEvent ev;
+    public UnityEvent clickEvent;
 
     // Start is called before the first frame update
     void Start()
@@ -21,6 +21,6 @@ public class ClickableButton : MonoBehaviour
 
     void OnMouseDown()
     {
-        ev.Invoke();
+        clickEvent.Invoke();
     }
 }

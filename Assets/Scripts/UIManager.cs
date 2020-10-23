@@ -15,6 +15,9 @@ public class UIManager : Singleton<UIManager>
     [SerializeField] GameObject losePrompt;
     [SerializeField] GameObject winPrompt;
     [SerializeField] GameObject pausMenu;
+    [SerializeField] GameObject gameUI;
+
+
 
     [SerializeField] MainMenu _mainMenu;
 
@@ -76,6 +79,13 @@ public class UIManager : Singleton<UIManager>
         {
             Time.timeScale = 1.0f;
         }
+    }
+
+    public void ToogleGameUI()
+    {
+        bool value = gameUI.activeSelf;
+        gameUI.SetActive(!value);
+        
     }
 
     public void Pause()

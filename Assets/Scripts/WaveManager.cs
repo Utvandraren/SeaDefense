@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class WaveManager : Singleton<WaveManager>
 {
-    [SerializeField] WaveData[] Waves;
+     [SerializeField] public WaveData[] Waves;
     [Range(0.01f,1f)][SerializeField] float probabilityForWave;
     [HideInInspector]
     public Transform enemyTarget;

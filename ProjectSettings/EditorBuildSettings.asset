@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/TheShore.unity
     guid: e6767ee0226fccd4380b99769a96661e
+  - enabled: 1
+    path: Assets/Scenes/ExpansionMap.unity
+    guid: 2739616dee074c8419c4f2881fd92474
   m_configObjects: {}

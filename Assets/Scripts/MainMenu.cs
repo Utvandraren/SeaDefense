@@ -13,13 +13,13 @@ public class MainMenu : MonoBehaviour
         GameManager.Instance.OnGameStateChanged.AddListener(HandleGameStateChanged);
     }
 
-    public void OnFadeOutComplete()
+    public void OnFadeInComplete()
     {
-        GameManager.Instance.LoadLevel("TheShore");
-        FadeIn();
+        GameManager.Instance.LoadLevel("ExpansionMap");
+        FadeOut();
     }
 
-    public void OnFadeInComplete()
+    public void OnFadeOutComplete()
     {
         GameManager.Instance.Unloadlevel("StartMenu");
         gameObject.SetActive(false);

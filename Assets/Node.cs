@@ -18,6 +18,8 @@ public class Node : MonoBehaviour
         }
         public Difficulty diff;
         public int reward;
+        public WaveData[] Waves;
+
     }
 
     void OnMouseDown()

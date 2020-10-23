@@ -8,34 +8,26 @@ public class ExpansionMapManager : Singleton<ExpansionMapManager>
     [SerializeField] private TextMesh difficultyText;
     [SerializeField] private TextMesh rewardText;
 
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void LoadMissionPrefab(Vector3 nodePos, Node.MissionDetails missionData)
     {
         missionPrefab.SetActive(true);
         missionPrefab.transform.position = nodePos;
         difficultyText.text = missionData.diff.ToString();
         rewardText.text = missionData.reward.ToString();
+        LoadLevelDetails(missionData);
     }
 
-    public void testLog()
+    public void LoadLevelDetails(Node.MissionDetails details)
     {
-        Debug.Log("Ping");
+        WaveManager.Instance.Waves = details.Waves;
     }
 
     public void StartLevel()
-    {//load in string levelname here some way
-        GameManager.Instance.LoadLevel("");
+    {
+        //load in string levelname here some way  
+        UIManager.Instance.ToogleGameUI();
+        GameManager.Instance.LoadLevel("TheShore");
+        GameManager.Instance.Unloadlevel("ExpansionMap");
+
     }
 }

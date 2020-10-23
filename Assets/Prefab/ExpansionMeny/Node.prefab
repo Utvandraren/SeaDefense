@@ -95,6 +95,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d9f7ac1836ec20b4ab778dd10b7dee42, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  missionData:
+    diff: 3
+    reward: 123
+    Waves: []
 --- !u!58 &6080317524700715371
 CircleCollider2D:
   m_ObjectHideFlags: 0
