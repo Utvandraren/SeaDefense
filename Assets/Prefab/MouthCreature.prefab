@@ -428,7 +428,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32c0285dae5ad02439182ec6f8854da8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
 --- !u!114 &8827075043015847204
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -493,8 +492,8 @@ SkinnedMeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 4835078630258379571, guid: 3be176a1b29e46c4ca118c58f90f50d1, type: 3}
-  - {fileID: 528822225289384611, guid: 3be176a1b29e46c4ca118c58f90f50d1, type: 3}
+  - {fileID: 2100000, guid: af1d3155de0e947428d46d58add21f9f, type: 2}
+  - {fileID: 2100000, guid: 4fe27204f345dc44b944dc5983ad44b6, type: 2}
   - {fileID: -3981065676529349206, guid: 3be176a1b29e46c4ca118c58f90f50d1, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0

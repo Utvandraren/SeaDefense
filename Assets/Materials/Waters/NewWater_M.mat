@@ -236,7 +236,7 @@ Material:
     - _ZTestTransparent: 4
     - _ZWrite: 1
     m_Colors:
-    - Color_87D443ED: {r: 0.17799929, g: 0.2524092, b: 0.3018868, a: 0.6156863}
+    - Color_87D443ED: {r: 0.17799923, g: 0.25240913, b: 0.3018867, a: 0.79607844}
     - Color_D41F913D: {r: 0, g: 0, b: 0, a: 0.72156864}
     - Vector2_57113EED: {r: 100, g: 100, b: 0, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}

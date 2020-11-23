@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4943826938661781336}
   - component: {fileID: 6804277270515803926}
   - component: {fileID: 6015701649025241768}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -101,7 +101,7 @@ GameObject:
   - component: {fileID: 7750783963444326840}
   - component: {fileID: 849033694060881242}
   - component: {fileID: 5055894818362855066}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Cube.006
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -181,13 +181,13 @@ GameObject:
   - component: {fileID: 3247648044442673552}
   - component: {fileID: 3247648044442673566}
   - component: {fileID: 3247648044442673553}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 4294967295
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &3247648044442673552
 Transform:
   m_ObjectHideFlags: 0
@@ -196,7 +196,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3247648044442673555}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 24.707, z: 0}
+  m_LocalPosition: {x: 0, y: 25.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7524180713175926582}
@@ -213,9 +213,9 @@ Light:
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1.6313381
-  m_Range: 26.1
+  m_Color: {r: 0.9686275, g: 0.9686275, b: 0.9725491, a: 1}
+  m_Intensity: 0.6047888
+  m_Range: 21.8
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -283,7 +283,7 @@ MonoBehaviour:
   m_PointlightHDType: 0
   m_SpotLightShape: 0
   m_AreaLightShape: 0
-  m_Intensity: 20.5
+  m_Intensity: 7.6
   m_EnableSpotReflector: 0
   m_LuxAtDistance: 1
   m_InnerSpotPercent: 0
@@ -344,8 +344,8 @@ MonoBehaviour:
   m_VolumetricShadowDimmer: 1
   m_ShadowFadeDistance: 10000
   m_UseContactShadow:
-    m_Override: 0
-    m_UseOverride: 1
+    m_Override: 1
+    m_UseOverride: 0
     m_Level: 0
   m_RayTracedContactShadow: 0
   m_ShadowTint: {r: 0, g: 0, b: 0, a: 1}
@@ -384,7 +384,7 @@ GameObject:
   - component: {fileID: 8742217637295428975}
   - component: {fileID: 682181974847769181}
   - component: {fileID: 6999310189675633967}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Cube.004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -464,7 +464,7 @@ GameObject:
   - component: {fileID: 7748075911711453120}
   - component: {fileID: 9039150784992588270}
   - component: {fileID: 3132246430307413724}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Cube.007
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -544,7 +544,7 @@ GameObject:
   - component: {fileID: 1133254522166318872}
   - component: {fileID: 7062060662830858899}
   - component: {fileID: 8334312182408417360}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Cube.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -624,7 +624,7 @@ GameObject:
   - component: {fileID: 539705111174136565}
   - component: {fileID: 6778055978917571157}
   - component: {fileID: 2694219975225021663}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Cube.003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -704,7 +704,7 @@ GameObject:
   - component: {fileID: 7018724013122010839}
   - component: {fileID: 6687746799040723157}
   - component: {fileID: 4561868441326288326}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Cube.005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -784,7 +784,7 @@ GameObject:
   - component: {fileID: 7954342385090882731}
   - component: {fileID: 2424928257201071656}
   - component: {fileID: 3123601528485751701}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Cube.008
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -863,7 +863,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7524180713175926582}
   - component: {fileID: 4778349675351649454}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: LightHouse
   m_TagString: Building
   m_Icon: {fileID: 0}
@@ -879,7 +879,7 @@ Transform:
   m_GameObject: {fileID: 6786955040459633957}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -25.5, y: 1.67, z: 60.9}
-  m_LocalScale: {x: 0.2883472, y: 0.2883472, z: 0.2883472}
+  m_LocalScale: {x: 0.0719573, y: 0.07195729, z: 0.0719573}
   m_Children:
   - {fileID: 4943826938661781336}
   - {fileID: 4029399365698812136}
@@ -914,7 +914,7 @@ GameObject:
   - component: {fileID: 4029399365698812136}
   - component: {fileID: 6003977017257751905}
   - component: {fileID: 2746181350859642483}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: LightLamp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -994,7 +994,7 @@ GameObject:
   - component: {fileID: 6306828932086571106}
   - component: {fileID: 181381460149654998}
   - component: {fileID: 2584955937382809634}
-  m_Layer: 9
+  m_Layer: 0
   m_Name: Cube.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
