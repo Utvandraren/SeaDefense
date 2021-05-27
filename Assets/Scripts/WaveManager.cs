@@ -10,6 +10,8 @@ public class WaveManager : Singleton<WaveManager>
     public Transform enemyTarget;
 
     private int currentWave;
+    bool coRoutRunning = false;
+
 
     // Start is called before the first frame update
     void Start()
@@ -25,7 +27,6 @@ public class WaveManager : Singleton<WaveManager>
     /// <returns></returns>
     IEnumerator CheckProbToStart()
     {
-        bool coRoutRunning;
         coRoutRunning = true;
 
         while (coRoutRunning)

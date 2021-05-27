@@ -6,6 +6,7 @@ public class Shoot : MonoBehaviour
 {
     float CurrentCoolDown;
     GameObject target;
+    AudioSource source;
 
     [SerializeField] GameObject bullet;
     [SerializeField] float CoolDown;
@@ -19,6 +20,7 @@ public class Shoot : MonoBehaviour
     void Start()
     {
         InvokeRepeating("UpdateTarget", 0f, 0.5f);
+        source = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -83,6 +85,7 @@ public class Shoot : MonoBehaviour
 
     void ShootAtTarget(GameObject target)
     {
+        source.Play();
         muzzleFlash.Play();
         Instantiate(bullet, firePoint.position, firePoint.rotation);
     }

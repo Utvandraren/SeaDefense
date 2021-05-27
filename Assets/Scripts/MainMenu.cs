@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class MainMenu : MonoBehaviour
 {
-    [SerializeField]Animation _mainmenuAnimator;
-    [SerializeField]AnimationClip _fadeOutAnimation;
-    [SerializeField]AnimationClip _fadeInAnimation;
+    [SerializeField] string levelToStart = "ExpansionMap";
+    [SerializeField] Animation _mainmenuAnimator;
+    [SerializeField] AnimationClip _fadeOutAnimation;
+    [SerializeField] AnimationClip _fadeInAnimation;
 
     void Start()
     {
@@ -15,7 +16,7 @@ public class MainMenu : MonoBehaviour
 
     public void OnFadeInComplete()
     {
-        GameManager.Instance.LoadLevel("ExpansionMap");
+        GameManager.Instance.LoadLevel(levelToStart);
         FadeOut();
     }
 

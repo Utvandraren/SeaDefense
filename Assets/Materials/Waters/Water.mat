@@ -10,19 +10,21 @@ Material:
   m_Name: Water
   m_Shader: {fileID: -6465566751694194690, guid: 05b66e28de2f00e43a88a015f6913b6e,
     type: 3}
-  m_ShaderKeywords: _NORMALMAP_TANGENT_SPACE
+  m_ShaderKeywords: _DISABLE_DECALS _DISABLE_SSR_TRANSPARENT _ENABLE_FOG_ON_TRANSPARENT
+    _SURFACE_TYPE_TRANSPARENT
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
+  m_CustomRenderQueue: 3000
   stringTagMap:
     MotionVector: User
+    RenderType: Transparent
   disabledShaderPasses:
-  - DistortionVectors
+  - MOTIONVECTORS
   - TransparentBackface
   - TransparentDepthPrepass
   - TransparentDepthPostpass
-  - MOTIONVECTORS
+  - RayTracingPrepass
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
@@ -34,23 +36,85 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Floats:
     - Vector1_1745D601: 0.21
-    - Vector1_2E3865AE: 0.9
-    - Vector1_36130636: 4.11
-    - Vector1_365B3578: 1
-    - Vector1_6E0633E6: 0.4
-    - Vector1_97485739: 41.56
-    - Vector1_ACCF0B99: 0.8
+    - Vector1_2E3865AE: 11.71
+    - Vector1_36130636: 4.7
+    - Vector1_365B3578: 0.866
+    - Vector1_6E0633E6: 0.25
+    - Vector1_97485739: 46.54
+    - Vector1_ACCF0B99: 0.5
     - Vector1_B357B5DC: 0.15
     - Vector1_D38E4E5D: 0
-    - Vector1_DA305224: 1.09
+    - Vector1_DA305224: 0.91
     - Vector1_E324E24E: 0
-    - Vector1_FE6D09F: 1.15
+    - Vector1_FE6D09F: 0.76
+    - _AddPrecomputedVelocity: 0
+    - _AlphaCutoffEnable: 0
+    - _AlphaDstBlend: 10
+    - _AlphaSrcBlend: 1
+    - _AlphaToMask: 0
+    - _AlphaToMaskInspectorValue: 0
+    - _BlendMode: 0
+    - _CullMode: 2
+    - _CullModeForward: 2
+    - _DepthOffsetEnable: 0
+    - _DoubleSidedEnable: 0
+    - _DoubleSidedNormalMode: 2
+    - _DstBlend: 10
+    - _EnableBlendModePreserveSpecularLighting: 0
+    - _EnableFogOnTransparent: 1
+    - _OpaqueCullMode: 2
+    - _RayTracing: 0
+    - _ReceivesSSR: 1
+    - _ReceivesSSRTransparent: 0
+    - _RefractionModel: 0
+    - _RenderQueueType: 4
+    - _RequireSplitLighting: 0
+    - _SrcBlend: 1
+    - _StencilRef: 0
+    - _StencilRefDepth: 0
+    - _StencilRefDistortionVec: 4
+    - _StencilRefGBuffer: 2
+    - _StencilRefMV: 32
+    - _StencilWriteMask: 6
+    - _StencilWriteMaskDepth: 8
+    - _StencilWriteMaskDistortionVec: 4
+    - _StencilWriteMaskGBuffer: 14
+    - _StencilWriteMaskMV: 40
+    - _SupportDecals: 0
+    - _SurfaceType: 1
+    - _TransparentBackfaceEnable: 0
+    - _TransparentCullMode: 2
+    - _TransparentDepthPostpassEnable: 0
+    - _TransparentDepthPrepassEnable: 0
+    - _TransparentSortPriority: 0
+    - _TransparentWritingMotionVec: 0
+    - _TransparentZWrite: 0
+    - _UseShadowThreshold: 0
+    - _ZTestDepthEqualForOpaque: 4
+    - _ZTestGBuffer: 4
+    - _ZTestTransparent: 4
+    - _ZWrite: 0
     m_Colors:
     - Color_142AEDA2: {r: 0, g: 0, b: 0, a: 0}
-    - Color_5AE00ABC: {r: 0, g: 0, b: 0, a: 0.50980395}
-    - Color_E8636AF9: {r: 0, g: 0, b: 0, a: 0}
+    - Color_5AE00ABC: {r: 0, g: 0, b: 0, a: 1}
+    - Color_E8636AF9: {r: 0.8915094, g: 0.95371723, b: 1, a: 1}
+    - _DoubleSidedConstants: {r: 1, g: 1, b: -1, a: 0}
+    - _EmissionColor: {r: 1, g: 1, b: 1, a: 1}
+  m_BuildTextureStacks: []
 --- !u!114 &2842848519269484925
 MonoBehaviour:
   m_ObjectHideFlags: 11
@@ -63,4 +127,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da692e001514ec24dbc4cca1949ff7e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  version: 2
+  version: 11

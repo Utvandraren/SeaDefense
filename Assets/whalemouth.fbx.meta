@@ -2,7 +2,136 @@ fileFormatVersion: 2
 guid: cc22e0e0ab5e0c14fa3d59b33fdf976c
 ModelImporter:
   serializedVersion: 19301
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      74: -100904308872108182
+    second: BakedEmerge
+  - first:
+      74: 5396315935498910418
+    second: Creature|Action.002
+  - first:
+      74: 1992073277163246081
+    second: Creature|BakedEmerge
+  - first:
+      74: -1364588173581498596
+    second: Creature|BakedIdle
+  - first:
+      74: -4633012386308435461
+    second: Creature|BodyTargetAction
+  - first:
+      74: -5775624520374664200
+    second: Creature|HeadIKTargetAction
+  - first:
+      74: -965630311452060538
+    second: Creature|HeadIKTargetAction.001
+  - first:
+      74: 4864456487366326693
+    second: Armature|Action.002
+  - first:
+      74: 4518521858587295130
+    second: Armature|BakedEmerge
+  - first:
+      74: -256195244295353502
+    second: Armature|BakedIdle
+  - first:
+      74: 8807440322520723814
+    second: Armature|BodyTargetAction
+  - first:
+      74: -733846666094655891
+    second: Armature|HeadIKTargetAction
+  - first:
+      74: 6336060114345939154
+    second: Armature|HeadIKTargetAction.001
+  - first:
+      74: 3519563896613382689
+    second: HeadIKTarget|Action.002
+  - first:
+      74: 6006779312433669462
+    second: HeadIKTarget|BakedEmerge
+  - first:
+      74: 1305349460535359440
+    second: HeadIKTarget|BakedIdle
+  - first:
+      74: -5565778199778266183
+    second: HeadIKTarget|BodyTargetAction
+  - first:
+      74: 5444576531366828117
+    second: HeadIKTarget|HeadIKTargetAction
+  - first:
+      74: -8375339903480488592
+    second: HeadIKTarget|HeadIKTargetAction.001
+  - first:
+      74: -6913825773740639098
+    second: BodyTarget|Action.002
+  - first:
+      74: -2159505486376658223
+    second: BodyTarget|BakedEmerge
+  - first:
+      74: 5624238398312818527
+    second: BodyTarget|BakedIdle
+  - first:
+      74: 7764428544186690574
+    second: BodyTarget|BodyTargetAction
+  - first:
+      74: 7598301154536168876
+    second: BodyTarget|HeadIKTargetAction
+  - first:
+      74: 446861287361809437
+    second: BodyTarget|HeadIKTargetAction.001
+  - first:
+      74: -8945691123924629249
+    second: Armature|Idle
+  - first:
+      74: 1188916990941487072
+    second: HeadIKTarget|Idle
+  - first:
+      74: 6897178618575773494
+    second: BodyTarget|Idle
+  - first:
+      74: 4723146814002874508
+    second: Armature|Attack
+  - first:
+      74: 768470926071881702
+    second: Armature|BodyTargetAction.001
+  - first:
+      74: -664535776967208715
+    second: Armature|BodyTargetAction.002
+  - first:
+      74: 29928185044380098
+    second: Armature|Emerge
+  - first:
+      74: -7103055937058176250
+    second: Armature|HeadIKTargetAction.002
+  - first:
+      74: 5216166392708252437
+    second: HeadIKTarget|Attack
+  - first:
+      74: -840837198487136989
+    second: HeadIKTarget|BodyTargetAction.001
+  - first:
+      74: 4442595159369519867
+    second: HeadIKTarget|BodyTargetAction.002
+  - first:
+      74: 171283112369578590
+    second: HeadIKTarget|Emerge
+  - first:
+      74: -3780016874606519362
+    second: HeadIKTarget|HeadIKTargetAction.002
+  - first:
+      74: -8268729140979191316
+    second: BodyTarget|Attack
+  - first:
+      74: 4068869805612745704
+    second: BodyTarget|BodyTargetAction.001
+  - first:
+      74: -472095995761566410
+    second: BodyTarget|BodyTargetAction.002
+  - first:
+      74: 2324280102555427839
+    second: BodyTarget|Emerge
+  - first:
+      74: 2863582812887499739
+    second: BodyTarget|HeadIKTargetAction.002
   externalObjects: {}
   materials:
     materialImportMode: 1
@@ -22,7 +151,7 @@ ModelImporter:
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
-    importConstraints: 0
+    importConstraints: 1
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5

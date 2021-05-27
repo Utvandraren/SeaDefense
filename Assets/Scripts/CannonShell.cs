@@ -34,9 +34,13 @@ public class CannonShell : MonoBehaviour
         {
             collision.collider.transform.GetComponent<Health>().TakeDamage(damage);
         }
+        else if(collision.collider.transform.tag == "Player")
+        {
+            collision.collider.transform.GetComponent<PlayerHealth>().TakeDamage(damage);
+        }
 
         ParticleSystem instObj = Instantiate(impactEffect, transform.position, transform.rotation);
-        Destroy(instObj, 6f);
+        //Destroy(instObj, 6f);
         Destroy(gameObject);
     }
 
